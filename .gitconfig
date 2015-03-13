@@ -1,0 +1,21 @@
+[credential]
+	helper = store
+[user]
+	name = Andy Christianson
+	email = nix@nixxed.com
+[core]
+	editor = nano
+	autocrlf = input
+[alias]
+	ca = commit -a
+	ci = commit
+	cl = clone
+	co = checkout
+	cb = checkout -b
+	cm = checkout master
+	st = status
+	fa = fetch --all
+	aa = add --all
+	ri = rebase -i upstream/master
+[push]
+	default = simple
