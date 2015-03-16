@@ -16,12 +16,13 @@
 	st = status
 	fa = fetch --all
 	aa = add --all
+	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	ri = rebase --interactive --autosquash upstream/master
 	up = !git checkout master && git pull && git push origin master
 	save = !git add -A && git commit -m 'quick save'
 	fix = !git add -A && git commit --fixup HEAD
 	undo = reset --soft HEAD~1
-	rc = !git add -A && git commit --amend -C HEAD
+	ac = !git add -A && git commit --amend -C HEAD
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
 [push]
