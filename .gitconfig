@@ -7,7 +7,7 @@
 	editor = nano
 	autocrlf = input
 [alias]
-	ca = commit -a
+	ca = !git add -A && git commit
 	ci = commit
 	cl = clone
 	co = checkout
@@ -17,9 +17,12 @@
 	fa = fetch --all
 	aa = add --all
 	ri = rebase --interactive --autosquash upstream/master
-	pom = push origin master
+	up = !git checkout master && git pull && git push origin master
 	save = !git add -A && git commit -m 'quick save'
 	fix = !git add -A && git commit --fixup HEAD
 	undo = reset --soft HEAD~1
+	rc = !git add -A && git commit --amend -C HEAD
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
 [push]
 	default = simple
