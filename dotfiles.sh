@@ -1,6 +1,6 @@
 #!/bin/bash
 
-files=".aliases .inputrc .gitconfig"    # list of files/folders to symlink in homedir
+files=".aliases .bashrc .inputrc .gitconfig"    # list of files/folders to symlink in homedir
 
 dir=~/.dotfiles                  # dotfiles directory
 olddir=~/.dotfiles/old           # old dotfiles backup directory
