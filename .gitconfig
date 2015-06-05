@@ -24,7 +24,7 @@
 	fix = !git add -A && git commit --fixup HEAD
 	undo = reset --soft HEAD~1
 	ac = !git add -A && git commit --amend -C HEAD
-	pf = git push -f
+	pf = push -f
 	acpf = !git ac && git pf
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
