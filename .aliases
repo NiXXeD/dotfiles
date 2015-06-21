@@ -19,3 +19,6 @@ alias la="ls -laF ${colorflag}"
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
+
+# Use color output for `grep`
+alias grep="command grep --color=auto"
