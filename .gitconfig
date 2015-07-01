@@ -17,6 +17,7 @@
 	fa = fetch --all
 	aa = add --all
 	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
+	pum = push upstream master
 	ri = rebase --interactive --autosquash upstream/master
         stup = !git stash && git up && git stash apply
 	save = !git add -A && git commit -m 'quick save'
