@@ -12,10 +12,14 @@
 	cl = clone
 	co = checkout
 	cb = checkout -b
+	cp = cherry-pick
 	cm = checkout master
 	st = status
 	fa = fetch --all
 	aa = add --all
+	pr = pull-request
+	br = browse
+	ci = ci-status
 	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	pum = push upstream master
 	ri = rebase --interactive --autosquash upstream/master

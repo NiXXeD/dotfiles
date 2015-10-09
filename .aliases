@@ -22,3 +22,6 @@ alias ls="command ls ${colorflag}"
 
 # Use color output for `grep`
 alias grep="command grep --color=auto"
+
+# git -> hub
+alias git=hub
