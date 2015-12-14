@@ -4,7 +4,7 @@
 	name = Andy Christianson
 	email = nix@nixxed.com
 [core]
-	editor = nano
+	editor = slap
 	autocrlf = input
 [alias]
 	ca = !git add -A && git commit
@@ -30,6 +30,7 @@
 	ac = !git add -A && git commit --amend -C HEAD
 	pf = push -f
 	acpf = !git ac && git pf
+        rekt = reset --hard
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
 	dmb = "!f() { git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1}; }; f"
 	up = !git checkout master && git branch --set-upstream-to=upstream/master && git pull && git push origin master && git dmb
