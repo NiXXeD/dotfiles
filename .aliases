@@ -23,5 +23,8 @@ alias ls="command ls ${colorflag}"
 # Grep options
 alias grep="command grep --color=auto --exclude-dir={node_modules,.git,coverage,dist,.idea}"
 
+# Ack options
+alias ack="command ack --ignore-dir={node_modules,coverage,dist,build,.idea} --color-match=red --color-filename=yellow"
+
 # git -> hub
 alias git=hub
