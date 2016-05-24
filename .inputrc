@@ -18,6 +18,3 @@ set completion-query-items 200
 
 # Show extra file information when completing, like `ls -F` does
 set visible-stats on
-
-# Ignore various directories for all greps
-export GREP_OPTIONS="--exclude-dir=node_modules --exclude-dir=.git --exclude-dir=coverage --exclude-dir=dist --exclude-dir=.idea"

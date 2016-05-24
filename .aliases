@@ -20,8 +20,8 @@ alias la="ls -laF ${colorflag}"
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
-# Use color output for `grep`
-alias grep="command grep --color=auto"
+# Grep options
+alias grep="command grep --color=auto --exclude-dir={node_modules,.git,coverage,dist,.idea}"
 
 # git -> hub
 alias git=hub
