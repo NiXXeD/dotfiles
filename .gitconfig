@@ -4,7 +4,7 @@
 	name = Andy Christianson
 	email = nix@nixxed.com
 [core]
-	editor = slap
+	editor = vim 
 	autocrlf = input
 [alias]
 	ca = !git add -A && git commit
