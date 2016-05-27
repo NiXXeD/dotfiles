@@ -7,6 +7,9 @@ set laststatus=2
 " Faster visual update time
 set updatetime=250
 
+" Enable mouse
+set mouse=a
+
 " Key bindings
 map <C-N> :NERDTreeToggle<CR>
 map! <C-N> <esc>:NERDTreeToggle<CR>
@@ -20,6 +23,7 @@ map ^H X1
 map! ^H X1
 map <C-D> yyP<CR>
 map! <C-D> <esc>yyP<CR>i
+map <enter> a<enter>
 
 " Vim Plug - https://github.com/junegunn/vim-plug
 " Run ':so %' followed by ':PlugInstall' to update 
