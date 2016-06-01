@@ -4,7 +4,7 @@
 	name = Andy Christianson
 	email = nix@nixxed.com
 [core]
-	editor = vim 
+	editor = vim -c 'startinsert' 
 	autocrlf = input
 [alias]
 	ca = !git add -A && git commit
@@ -23,14 +23,14 @@
 	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
 	pum = push upstream master
 	ri = rebase --interactive --autosquash upstream/master
-        stup = !git stash && git up && git stash apply
+	stup = !git stash && git up && git stash apply
 	save = !git add -A && git commit -m 'quick save'
 	fix = !git add -A && git commit --fixup HEAD
 	undo = reset --soft HEAD~1
 	ac = !git add -A && git commit --amend -C HEAD
 	pf = push -f
 	acpf = !git ac && git pf
-        rekt = reset --hard
+	rekt = reset --hard
 	fp = format-patch -1 --stdout
 	ap = apply
 	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative

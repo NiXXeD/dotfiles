@@ -17,7 +17,7 @@ set clipboard=unnamedplus
 map <C-N> :NERDTreeToggle<CR>
 map! <C-N> <esc>:NERDTreeToggle<CR>
 map <C-Q> :q!<CR>
-map <C-Q> <esc>:q!<CR>
+map! <C-Q> <esc>:q!<CR>
 map <C-S> :w<CR>
 map! <C-S> <esc>:w<CR>
 map <C-Y> :dl<CR>

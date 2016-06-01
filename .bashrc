@@ -12,3 +12,5 @@ Cyan='\[\e[0;36m\]'         # Cyan
 White='\[\e[0;37m\]'        # White
 
 export PS1="${Red}\u${White}@${Yellow}\h${White}:${Cyan}\w${White}$ ${Color_Off}"
+bind -r '\C-s'
+stty -ixon
