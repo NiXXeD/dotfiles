@@ -1,9 +1,9 @@
 # Easier navigation: .., ..., ...., .....
 alias ..="cd .."
-alias ...="cd ../../.."
-alias ....="cd ../../../.."
-alias .....="cd ../../../../.."
-alias ......="cd ../../../../../.."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -29,3 +29,6 @@ alias ack="command ack --ignore-dir={node_modules,coverage,dist,build,.idea} --c
 
 # git -> hub
 alias git=hub
+
+# conventional changelog
+alias chglog="conventional-changelog -p angular && conventional-changelog -p angular -i CHANGELOG.md -s"
