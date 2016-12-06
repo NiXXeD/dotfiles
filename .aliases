@@ -21,11 +21,14 @@ alias la="ls -laF ${colorflag}"
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"
 
+# yarn > npm
+alias npm=yarn
+
 # Grep options
 alias grep="command grep --color=auto --exclude-dir={node_modules,.git,coverage,dist,.idea}"
 
 # Ack options
-alias ack="command ack --ignore-dir={node_modules,coverage,dist,build,.idea} --color-match=red --color-filename=yellow"
+alias ack="command ack --ignore-file=is:yarn.lock --ignore-dir={node_modules,coverage,dist,build,.idea} --color-match=red --color-filename=yellow"
 
 # git -> hub
 alias git=hub
