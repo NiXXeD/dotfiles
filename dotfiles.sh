@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # list of files/folders to symlink in ~
-files=".aliases .bash_profile .bashrc .inputrc .gitconfig .vimrc"
+files=".aliases .zshrc .gitconfig"
 
 dir=~/.dotfiles                  # dotfiles directory
 olddir=~/.dotfiles/old           # old dotfiles backup directory
