@@ -7,13 +7,14 @@
 	editor = micro 
 	autocrlf = input
 [alias]
+	main-branch = !git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4'
 	ca = !git add -A && git commit
 	ci = commit
 	cl = clone
 	co = checkout
 	cb = checkout -b
 	cp = cherry-pick
-	cm = checkout master
+	cm = "!f(){ git checkout $(git main-branch) $@;}; f"
 	st = status -sb
 	fa = fetch --all
 	aa = add --all
@@ -21,14 +22,12 @@
 	br = browse
 	ci = ci-status
 	po = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
-	pum = push upstream master
-	ri = rebase --interactive --autosquash upstream/master
 	stup = !git stash && git up && git stash apply
 	save = !git add -A && git commit -m 'quick save'
 	fix = !git add -A && git commit --fixup HEAD
 	undo = reset --soft HEAD~1
 	ac = !git add -A && git commit --amend -C HEAD
-	pf = push -f
+	pff = pull --ff-only
 	acpf = !git ac && git pf
 	rekt = reset --hard
 	fp = format-patch -1 --stdout
